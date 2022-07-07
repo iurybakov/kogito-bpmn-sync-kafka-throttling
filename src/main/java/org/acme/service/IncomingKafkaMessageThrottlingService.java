@@ -31,28 +31,27 @@ public class IncomingKafkaMessageThrottlingService implements EventDispatcherLis
             .getLogger(IncomingKafkaMessageThrottlingService.class.getName());
 
     private final KafkaConsumer<?, ?> smallryeKafkaConsumer;
-    private final AtomicInteger unacknowledgedMessageCounter = new AtomicInteger(0);
+    private final AtomicInteger unprocessedEventCounter = new AtomicInteger(0);
     private final AtomicBoolean paused = new AtomicBoolean(false);
-    private final long unacknowledgedMessageLimit;
+    private final long unprocessedEventLimit;
 
     public IncomingKafkaMessageThrottlingService(
             final KafkaConsumer<?, ?> smallryeKafkaConsumer,
-            final long unacknowledgedMessageLimit) {
+            final long unprocessedEventLimit) {
         this.smallryeKafkaConsumer = smallryeKafkaConsumer;
-        this.unacknowledgedMessageLimit = unacknowledgedMessageLimit;
+        this.unprocessedEventLimit = unprocessedEventLimit;
     }
 
     @Override
     public void onItem(final Object payload) {
-        if (unacknowledgedMessageCounter.incrementAndGet() >= unacknowledgedMessageLimit) {
+        if (unprocessedEventCounter.incrementAndGet() >= unprocessedEventLimit) {
             if (!paused.getAndSet(true)) {
                 LOGGER.warning(
                         "Kafka incoming message throttling, consumer SUCCESSFULLY PAUSED");
             }
             smallryeKafkaConsumer.pause().subscribe().with(pausedTopicPartitions -> {
                 if (pausedTopicPartitions.isEmpty()) {
-                    LOGGER.warning(
-                            "Couldn't pause consumer properly, try again");
+                    LOGGER.warning("Couldn't pause consumer properly, try again");
                     final Consumer<?, ?> apacheKafkaConsumer = smallryeKafkaConsumer.unwrap();
                     apacheKafkaConsumer.pause(apacheKafkaConsumer.assignment());
                 }
@@ -62,7 +61,7 @@ public class IncomingKafkaMessageThrottlingService implements EventDispatcherLis
 
     @Override
     public void onComplete(final ProcessInstance<?> processInstance, final Throwable ex) {
-        if (unacknowledgedMessageCounter.decrementAndGet() < unacknowledgedMessageLimit &&
+        if (unprocessedEventCounter.decrementAndGet() < unprocessedEventLimit &&
                 paused.compareAndSet(true, false)) {
             smallryeKafkaConsumer.resume().subscribe().with(ignore -> LOGGER.warning(
                     "Kafka incoming message throttling, consumer SUCCESSFULLY RESUMED"));

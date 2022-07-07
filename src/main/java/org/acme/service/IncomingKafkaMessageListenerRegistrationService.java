@@ -58,17 +58,17 @@ public class IncomingKafkaMessageListenerRegistrationService {
     Instance<AbstractMessageConsumer<?, ?>> messageConsumers;
 
     void onStart(@Observes StartupEvent ev) {
-        final int unacknowledgedMessageLimit = numThreads - 1;
+        final int unprocessedEventLimit = numThreads - 1;
         for (final AbstractMessageConsumer<?, ?> messageConsumer : messageConsumers) {
             final String triggerName = messageConsumer.getTriggerName();
-            if (isKafkaRecordStreamSubscriptionMaxQueueSizeValid(triggerName)) {
+            if (isKafkaRecordStreamSubscriptionConfigValid(triggerName)) {
                 final KafkaConsumer<?, ?> smallryeKafkaConsumer =
                         kafkaConnector.getConsumer(triggerName);
                 if (smallryeKafkaConsumer != null) {
                     messageConsumer.registerDispatcherListener(
                             new IncomingKafkaMessageThrottlingService(
                                     smallryeKafkaConsumer,
-                                    unacknowledgedMessageLimit));
+                                    unprocessedEventLimit));
                 }
             }
         }
@@ -84,7 +84,7 @@ public class IncomingKafkaMessageListenerRegistrationService {
      * @see io.smallrye.reactive.messaging.kafka.impl.KafkaRecordStreamSubscription
      *      KafkaRecordStreamSubscription#maxQueueSize
      */
-    private boolean isKafkaRecordStreamSubscriptionMaxQueueSizeValid(final String triggerName) {
+    private boolean isKafkaRecordStreamSubscriptionConfigValid(final String triggerName) {
         final Config config = ConfigProvider.getConfig();
         final String maxPollRecordsProp =
                 ConnectorFactory.INCOMING_PREFIX + triggerName + ".max.poll.records";

@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_QOj9MNtHEDqh4tc9SPbkdw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_user1Item" structureRef="org.acme.kogitobpmn.User"/>
+  <bpmn2:itemDefinition id="_user2Item" structureRef="org.acme.kogitobpmn.User"/>
+  <bpmn2:itemDefinition id="_user3Item" structureRef="org.acme.kogitobpmn.User"/>
+  <bpmn2:itemDefinition id="_user4Item" structureRef="org.acme.kogitobpmn.User"/>
+  <bpmn2:itemDefinition id="_user5Item" structureRef="org.acme.kogitobpmn.User"/>
+  <bpmn2:itemDefinition id="_user6Item" structureRef="org.acme.kogitobpmn.User"/>
+  <bpmn2:itemDefinition id="_user7Item" structureRef="org.acme.kogitobpmn.User"/>
+  <bpmn2:itemDefinition id="_restmetaItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__EA9C47BF-E996-4941-ADE3-7BB5CB9641FE_restmetaOutputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="restmetaType" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="_FF503BE9-150A-4D2F-946F-5A5ECDB259D4" structureRef=""/>
+  <bpmn2:itemDefinition id="_DD879044-16A5-430A-806E-14D747C92AFE" structureRef=""/>
+  <bpmn2:itemDefinition id="__246E54FC-8397-4E35-8D03-D5976180CDB8_restmetaInputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__246E54FC-8397-4E35-8D03-D5976180CDB8_usernameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__246E54FC-8397-4E35-8D03-D5976180CDB8_resultOutputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_restmetaInputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_usernameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_resultOutputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__48F315F2-829A-40E4-8EB7-55DA4B561199_restmetaInputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__48F315F2-829A-40E4-8EB7-55DA4B561199_usernameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__48F315F2-829A-40E4-8EB7-55DA4B561199_resultOutputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__965387A7-07D4-45C9-B738-BE9E4DC3B3A1_restmetaInputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__965387A7-07D4-45C9-B738-BE9E4DC3B3A1_usernameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__965387A7-07D4-45C9-B738-BE9E4DC3B3A1_resultOutputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__388BC2EE-C307-43D2-89C6-60E3B9C665EF_restmetaInputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__388BC2EE-C307-43D2-89C6-60E3B9C665EF_usernameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__388BC2EE-C307-43D2-89C6-60E3B9C665EF_resultOutputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_restmetaInputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_usernameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_resultOutputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__47825BB0-0584-4F12-AC7B-539E39035FCA_restmetaInputXItem" structureRef="org.acme.kogitobpmn.DefaultRestMeta"/>
+  <bpmn2:itemDefinition id="__47825BB0-0584-4F12-AC7B-539E39035FCA_usernameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__47825BB0-0584-4F12-AC7B-539E39035FCA_resultOutputXItem" structureRef="Object"/>
+  <bpmn2:message id="_QOlyYNtHEDqh4tc9SPbkdw" itemRef="restmetaType" name="restmeta"/>
+  <bpmn2:interface id="_246E54FC-8397-4E35-8D03-D5976180CDB8_ServiceInterface" name="org.acme.kogitobpmn.RestServiceTaskDelegate" implementationRef="org.acme.kogitobpmn.RestServiceTaskDelegate">
+    <bpmn2:operation id="_246E54FC-8397-4E35-8D03-D5976180CDB8_ServiceOperation" name="execute" implementationRef="execute"/>
+  </bpmn2:interface>
+  <bpmn2:interface id="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_ServiceInterface" name="org.acme.kogitobpmn.RestServiceTaskDelegate" implementationRef="org.acme.kogitobpmn.RestServiceTaskDelegate">
+    <bpmn2:operation id="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_ServiceOperation" name="execute" implementationRef="execute"/>
+  </bpmn2:interface>
+  <bpmn2:interface id="_48F315F2-829A-40E4-8EB7-55DA4B561199_ServiceInterface" name="org.acme.kogitobpmn.RestServiceTaskDelegate" implementationRef="org.acme.kogitobpmn.RestServiceTaskDelegate">
+    <bpmn2:operation id="_48F315F2-829A-40E4-8EB7-55DA4B561199_ServiceOperation" name="execute" implementationRef="execute"/>
+  </bpmn2:interface>
+  <bpmn2:interface id="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_ServiceInterface" name="org.acme.kogitobpmn.RestServiceTaskDelegate" implementationRef="org.acme.kogitobpmn.RestServiceTaskDelegate">
+    <bpmn2:operation id="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_ServiceOperation" name="execute" implementationRef="execute"/>
+  </bpmn2:interface>
+  <bpmn2:interface id="_388BC2EE-C307-43D2-89C6-60E3B9C665EF_ServiceInterface" name="org.acme.kogitobpmn.RestServiceTaskDelegate" implementationRef="org.acme.kogitobpmn.RestServiceTaskDelegate">
+    <bpmn2:operation id="_388BC2EE-C307-43D2-89C6-60E3B9C665EF_ServiceOperation" name="execute" implementationRef="execute"/>
+  </bpmn2:interface>
+  <bpmn2:interface id="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_ServiceInterface" name="org.acme.kogitobpmn.RestServiceTaskDelegate" implementationRef="org.acme.kogitobpmn.RestServiceTaskDelegate">
+    <bpmn2:operation id="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_ServiceOperation" name="execute" implementationRef="execute"/>
+  </bpmn2:interface>
+  <bpmn2:interface id="_47825BB0-0584-4F12-AC7B-539E39035FCA_ServiceInterface" name="org.acme.kogitobpmn.RestServiceTaskDelegate" implementationRef="org.acme.kogitobpmn.RestServiceTaskDelegate">
+    <bpmn2:operation id="_47825BB0-0584-4F12-AC7B-539E39035FCA_ServiceOperation" name="execute" implementationRef="execute"/>
+  </bpmn2:interface>
+  <bpmn2:collaboration id="_2F18E9D2-E4E1-489B-942C-7BD033C7E2F1" name="Default Collaboration">
+    <bpmn2:participant id="_9FAFE8F3-A710-46FC-93B8-3EE2F34E63AE" name="Pool Participant" processRef="sequentialServiceTask"/>
+  </bpmn2:collaboration>
+  <bpmn2:process id="sequentialServiceTask" drools:packageName="org.acme.kogitobpmn" drools:version="1.0" drools:adHoc="false" name="sequentialServiceTask sync" isExecutable="true" processType="Public">
+    <bpmn2:extensionElements>
+      <drools:import name="org.acme.kogitobpmn.User"/>
+      <drools:import name="org.acme.kogitobpmn.DefaultRestMeta"/>
+    </bpmn2:extensionElements>
+    <bpmn2:property id="user1" itemSubjectRef="_user1Item" name="user1">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="user2" itemSubjectRef="_user2Item" name="user2">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="user3" itemSubjectRef="_user3Item" name="user3">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="user4" itemSubjectRef="_user4Item" name="user4">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="user5" itemSubjectRef="_user5Item" name="user5">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="user6" itemSubjectRef="_user6Item" name="user6">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="user7" itemSubjectRef="_user7Item" name="user7">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[output]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:property id="restmeta" itemSubjectRef="_restmetaItem" name="restmeta">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[input]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+    <bpmn2:sequenceFlow id="_7B7AA1FF-E767-4DA0-AA58-E1B09DC993F0" sourceRef="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8" targetRef="_47825BB0-0584-4F12-AC7B-539E39035FCA"/>
+    <bpmn2:sequenceFlow id="_02B45E27-177D-4B20-A3B7-AB5D8AFA2FD3" sourceRef="_388BC2EE-C307-43D2-89C6-60E3B9C665EF" targetRef="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8"/>
+    <bpmn2:sequenceFlow id="_4528A096-4CFB-48BD-B412-07A1A189206C" sourceRef="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1" targetRef="_388BC2EE-C307-43D2-89C6-60E3B9C665EF"/>
+    <bpmn2:sequenceFlow id="_1DB5CD23-4937-4E95-8991-3097B6906D4F" sourceRef="_48F315F2-829A-40E4-8EB7-55DA4B561199" targetRef="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1"/>
+    <bpmn2:sequenceFlow id="_78A69204-22D3-43D0-B7C4-60EB3933AF88" sourceRef="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A" targetRef="_48F315F2-829A-40E4-8EB7-55DA4B561199"/>
+    <bpmn2:sequenceFlow id="_72DF28AA-9C8A-42B2-878E-0025C53BA29D" sourceRef="_246E54FC-8397-4E35-8D03-D5976180CDB8" targetRef="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A"/>
+    <bpmn2:sequenceFlow id="_3C81FE81-49E9-4A75-ACD2-D05083451A44" sourceRef="_F8920E04-B14A-47F4-82E8-E430EB4475E2" targetRef="_246E54FC-8397-4E35-8D03-D5976180CDB8"/>
+    <bpmn2:sequenceFlow id="_24266760-316A-4E58-BAB8-94BF3EEDB1FE" sourceRef="_47825BB0-0584-4F12-AC7B-539E39035FCA" targetRef="_D4DC8E5F-7B31-4B89-8A31-7D50B46E50B6"/>
+    <bpmn2:sequenceFlow id="_08A01C4F-56AD-43DF-955C-1DECDDB47EBE" sourceRef="_EA9C47BF-E996-4941-ADE3-7BB5CB9641FE" targetRef="_F8920E04-B14A-47F4-82E8-E430EB4475E2"/>
+    <bpmn2:serviceTask id="_47825BB0-0584-4F12-AC7B-539E39035FCA" drools:serviceimplementation="Java" drools:serviceinterface="org.acme.kogitobpmn.RestServiceTaskDelegate" drools:serviceoperation="execute" name="SrvTaskRest7" implementation="Java" operationRef="_47825BB0-0584-4F12-AC7B-539E39035FCA_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SrvTaskRest7]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_7B7AA1FF-E767-4DA0-AA58-E1B09DC993F0</bpmn2:incoming>
+      <bpmn2:outgoing>_24266760-316A-4E58-BAB8-94BF3EEDB1FE</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_47825BB0-0584-4F12-AC7B-539E39035FCA_restmetaInputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__47825BB0-0584-4F12-AC7B-539E39035FCA_restmetaInputXItem" name="restmeta"/>
+        <bpmn2:dataInput id="_47825BB0-0584-4F12-AC7B-539E39035FCA_usernameInputX" drools:dtype="String" itemSubjectRef="__47825BB0-0584-4F12-AC7B-539E39035FCA_usernameInputXItem" name="username"/>
+        <bpmn2:dataOutput id="_47825BB0-0584-4F12-AC7B-539E39035FCA_resultOutputX" drools:dtype="Object" itemSubjectRef="__47825BB0-0584-4F12-AC7B-539E39035FCA_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_47825BB0-0584-4F12-AC7B-539E39035FCA_restmetaInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_47825BB0-0584-4F12-AC7B-539E39035FCA_usernameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_47825BB0-0584-4F12-AC7B-539E39035FCA_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>restmeta</bpmn2:sourceRef>
+        <bpmn2:targetRef>_47825BB0-0584-4F12-AC7B-539E39035FCA_restmetaInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_47825BB0-0584-4F12-AC7B-539E39035FCA_usernameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[username_7]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_47825BB0-0584-4F12-AC7B-539E39035FCA_usernameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_47825BB0-0584-4F12-AC7B-539E39035FCA_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>user7</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:serviceTask id="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8" drools:serviceimplementation="Java" drools:serviceinterface="org.acme.kogitobpmn.RestServiceTaskDelegate" drools:serviceoperation="execute" name="SrvTaskRest6" implementation="Java" operationRef="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SrvTaskRest6]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_02B45E27-177D-4B20-A3B7-AB5D8AFA2FD3</bpmn2:incoming>
+      <bpmn2:outgoing>_7B7AA1FF-E767-4DA0-AA58-E1B09DC993F0</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_restmetaInputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_restmetaInputXItem" name="restmeta"/>
+        <bpmn2:dataInput id="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_usernameInputX" drools:dtype="String" itemSubjectRef="__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_usernameInputXItem" name="username"/>
+        <bpmn2:dataOutput id="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_resultOutputX" drools:dtype="Object" itemSubjectRef="__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_restmetaInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_usernameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>restmeta</bpmn2:sourceRef>
+        <bpmn2:targetRef>_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_restmetaInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_usernameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[username_6]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_usernameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>user6</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:serviceTask id="_388BC2EE-C307-43D2-89C6-60E3B9C665EF" drools:serviceimplementation="Java" drools:serviceinterface="org.acme.kogitobpmn.RestServiceTaskDelegate" drools:serviceoperation="execute" name="SrvTaskRest5" implementation="Java" operationRef="_388BC2EE-C307-43D2-89C6-60E3B9C665EF_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SrvTaskRest5]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_4528A096-4CFB-48BD-B412-07A1A189206C</bpmn2:incoming>
+      <bpmn2:outgoing>_02B45E27-177D-4B20-A3B7-AB5D8AFA2FD3</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_388BC2EE-C307-43D2-89C6-60E3B9C665EF_restmetaInputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__388BC2EE-C307-43D2-89C6-60E3B9C665EF_restmetaInputXItem" name="restmeta"/>
+        <bpmn2:dataInput id="_388BC2EE-C307-43D2-89C6-60E3B9C665EF_usernameInputX" drools:dtype="String" itemSubjectRef="__388BC2EE-C307-43D2-89C6-60E3B9C665EF_usernameInputXItem" name="username"/>
+        <bpmn2:dataOutput id="_388BC2EE-C307-43D2-89C6-60E3B9C665EF_resultOutputX" drools:dtype="Object" itemSubjectRef="__388BC2EE-C307-43D2-89C6-60E3B9C665EF_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_388BC2EE-C307-43D2-89C6-60E3B9C665EF_restmetaInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_388BC2EE-C307-43D2-89C6-60E3B9C665EF_usernameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_388BC2EE-C307-43D2-89C6-60E3B9C665EF_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>restmeta</bpmn2:sourceRef>
+        <bpmn2:targetRef>_388BC2EE-C307-43D2-89C6-60E3B9C665EF_restmetaInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_388BC2EE-C307-43D2-89C6-60E3B9C665EF_usernameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[username_5]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_388BC2EE-C307-43D2-89C6-60E3B9C665EF_usernameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_388BC2EE-C307-43D2-89C6-60E3B9C665EF_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>user5</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:serviceTask id="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1" drools:serviceimplementation="Java" drools:serviceinterface="org.acme.kogitobpmn.RestServiceTaskDelegate" drools:serviceoperation="execute" name="SrvTaskRest4" implementation="Java" operationRef="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SrvTaskRest4]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_1DB5CD23-4937-4E95-8991-3097B6906D4F</bpmn2:incoming>
+      <bpmn2:outgoing>_4528A096-4CFB-48BD-B412-07A1A189206C</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_restmetaInputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__965387A7-07D4-45C9-B738-BE9E4DC3B3A1_restmetaInputXItem" name="restmeta"/>
+        <bpmn2:dataInput id="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_usernameInputX" drools:dtype="String" itemSubjectRef="__965387A7-07D4-45C9-B738-BE9E4DC3B3A1_usernameInputXItem" name="username"/>
+        <bpmn2:dataOutput id="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_resultOutputX" drools:dtype="Object" itemSubjectRef="__965387A7-07D4-45C9-B738-BE9E4DC3B3A1_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_restmetaInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_usernameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>restmeta</bpmn2:sourceRef>
+        <bpmn2:targetRef>_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_restmetaInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_usernameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[username_4]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_usernameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_965387A7-07D4-45C9-B738-BE9E4DC3B3A1_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>user4</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:serviceTask id="_48F315F2-829A-40E4-8EB7-55DA4B561199" drools:serviceimplementation="Java" drools:serviceinterface="org.acme.kogitobpmn.RestServiceTaskDelegate" drools:serviceoperation="execute" name="SrvTaskRest3" implementation="Java" operationRef="_48F315F2-829A-40E4-8EB7-55DA4B561199_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SrvTaskRest3]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_78A69204-22D3-43D0-B7C4-60EB3933AF88</bpmn2:incoming>
+      <bpmn2:outgoing>_1DB5CD23-4937-4E95-8991-3097B6906D4F</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_48F315F2-829A-40E4-8EB7-55DA4B561199_restmetaInputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__48F315F2-829A-40E4-8EB7-55DA4B561199_restmetaInputXItem" name="restmeta"/>
+        <bpmn2:dataInput id="_48F315F2-829A-40E4-8EB7-55DA4B561199_usernameInputX" drools:dtype="String" itemSubjectRef="__48F315F2-829A-40E4-8EB7-55DA4B561199_usernameInputXItem" name="username"/>
+        <bpmn2:dataOutput id="_48F315F2-829A-40E4-8EB7-55DA4B561199_resultOutputX" drools:dtype="Object" itemSubjectRef="__48F315F2-829A-40E4-8EB7-55DA4B561199_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_48F315F2-829A-40E4-8EB7-55DA4B561199_restmetaInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_48F315F2-829A-40E4-8EB7-55DA4B561199_usernameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_48F315F2-829A-40E4-8EB7-55DA4B561199_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>restmeta</bpmn2:sourceRef>
+        <bpmn2:targetRef>_48F315F2-829A-40E4-8EB7-55DA4B561199_restmetaInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_48F315F2-829A-40E4-8EB7-55DA4B561199_usernameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[username_3]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_48F315F2-829A-40E4-8EB7-55DA4B561199_usernameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_48F315F2-829A-40E4-8EB7-55DA4B561199_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>user3</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:serviceTask id="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A" drools:serviceimplementation="Java" drools:serviceinterface="org.acme.kogitobpmn.RestServiceTaskDelegate" drools:serviceoperation="execute" name="SrvTaskRest2" implementation="Java" operationRef="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SrvTaskRest2]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_72DF28AA-9C8A-42B2-878E-0025C53BA29D</bpmn2:incoming>
+      <bpmn2:outgoing>_78A69204-22D3-43D0-B7C4-60EB3933AF88</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_restmetaInputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_restmetaInputXItem" name="restmeta"/>
+        <bpmn2:dataInput id="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_usernameInputX" drools:dtype="String" itemSubjectRef="__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_usernameInputXItem" name="username"/>
+        <bpmn2:dataOutput id="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_resultOutputX" drools:dtype="Object" itemSubjectRef="__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_restmetaInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_usernameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>restmeta</bpmn2:sourceRef>
+        <bpmn2:targetRef>_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_restmetaInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_usernameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[username_2]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_usernameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>user2</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:scriptTask id="_F8920E04-B14A-47F4-82E8-E430EB4475E2" name="SetRestMeta" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SetRestMeta]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_08A01C4F-56AD-43DF-955C-1DECDDB47EBE</bpmn2:incoming>
+      <bpmn2:outgoing>_3C81FE81-49E9-4A75-ACD2-D05083451A44</bpmn2:outgoing>
+      <bpmn2:script>final String host = restmeta.getHost();
+if (host == null || host == "") {
+    restmeta.setHost("localhost");
+} 
+if (restmeta.getPort() == null) {
+    restmeta.setPort(8000);
+}
+restmeta.setUrl("/user/{username}");
+restmeta.setUsername("username");
+restmeta.setMethod("GET");
+</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:serviceTask id="_246E54FC-8397-4E35-8D03-D5976180CDB8" drools:serviceimplementation="Java" drools:serviceinterface="org.acme.kogitobpmn.RestServiceTaskDelegate" drools:serviceoperation="execute" name="SrvTaskRest1" implementation="Java" operationRef="_246E54FC-8397-4E35-8D03-D5976180CDB8_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[SrvTaskRest1]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_3C81FE81-49E9-4A75-ACD2-D05083451A44</bpmn2:incoming>
+      <bpmn2:outgoing>_72DF28AA-9C8A-42B2-878E-0025C53BA29D</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_246E54FC-8397-4E35-8D03-D5976180CDB8_restmetaInputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__246E54FC-8397-4E35-8D03-D5976180CDB8_restmetaInputXItem" name="restmeta"/>
+        <bpmn2:dataInput id="_246E54FC-8397-4E35-8D03-D5976180CDB8_usernameInputX" drools:dtype="String" itemSubjectRef="__246E54FC-8397-4E35-8D03-D5976180CDB8_usernameInputXItem" name="username"/>
+        <bpmn2:dataOutput id="_246E54FC-8397-4E35-8D03-D5976180CDB8_resultOutputX" drools:dtype="Object" itemSubjectRef="__246E54FC-8397-4E35-8D03-D5976180CDB8_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_246E54FC-8397-4E35-8D03-D5976180CDB8_restmetaInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_246E54FC-8397-4E35-8D03-D5976180CDB8_usernameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_246E54FC-8397-4E35-8D03-D5976180CDB8_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>restmeta</bpmn2:sourceRef>
+        <bpmn2:targetRef>_246E54FC-8397-4E35-8D03-D5976180CDB8_restmetaInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>_246E54FC-8397-4E35-8D03-D5976180CDB8_usernameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[username_1]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_246E54FC-8397-4E35-8D03-D5976180CDB8_usernameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_246E54FC-8397-4E35-8D03-D5976180CDB8_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>user1</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:endEvent id="_D4DC8E5F-7B31-4B89-8A31-7D50B46E50B6">
+      <bpmn2:incoming>_24266760-316A-4E58-BAB8-94BF3EEDB1FE</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_EA9C47BF-E996-4941-ADE3-7BB5CB9641FE">
+      <bpmn2:outgoing>_08A01C4F-56AD-43DF-955C-1DECDDB47EBE</bpmn2:outgoing>
+      <bpmn2:dataOutput id="_EA9C47BF-E996-4941-ADE3-7BB5CB9641FE_restmetaOutputX" drools:dtype="org.acme.kogitobpmn.DefaultRestMeta" itemSubjectRef="__EA9C47BF-E996-4941-ADE3-7BB5CB9641FE_restmetaOutputXItem" name="restmeta"/>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_EA9C47BF-E996-4941-ADE3-7BB5CB9641FE_restmetaOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>restmeta</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:outputSet>
+        <bpmn2:dataOutputRefs>_EA9C47BF-E996-4941-ADE3-7BB5CB9641FE_restmetaOutputX</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+      <bpmn2:messageEventDefinition drools:msgref="restmeta" messageRef="_QOlyYNtHEDqh4tc9SPbkdw"/>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="sequentialServiceTask">
+      <bpmndi:BPMNShape id="shape__EA9C47BF-E996-4941-ADE3-7BB5CB9641FE" bpmnElement="_EA9C47BF-E996-4941-ADE3-7BB5CB9641FE">
+        <dc:Bounds height="56" width="56" x="380" y="114"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__D4DC8E5F-7B31-4B89-8A31-7D50B46E50B6" bpmnElement="_D4DC8E5F-7B31-4B89-8A31-7D50B46E50B6">
+        <dc:Bounds height="56" width="56" x="938" y="816"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__246E54FC-8397-4E35-8D03-D5976180CDB8" bpmnElement="_246E54FC-8397-4E35-8D03-D5976180CDB8">
+        <dc:Bounds height="102" width="154" x="710" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__F8920E04-B14A-47F4-82E8-E430EB4475E2" bpmnElement="_F8920E04-B14A-47F4-82E8-E430EB4475E2">
+        <dc:Bounds height="102" width="154" x="496" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A" bpmnElement="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A">
+        <dc:Bounds height="102" width="154" x="710" y="208"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__48F315F2-829A-40E4-8EB7-55DA4B561199" bpmnElement="_48F315F2-829A-40E4-8EB7-55DA4B561199">
+        <dc:Bounds height="102" width="154" x="710" y="325"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__965387A7-07D4-45C9-B738-BE9E4DC3B3A1" bpmnElement="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1">
+        <dc:Bounds height="102" width="154" x="710" y="442"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__388BC2EE-C307-43D2-89C6-60E3B9C665EF" bpmnElement="_388BC2EE-C307-43D2-89C6-60E3B9C665EF">
+        <dc:Bounds height="102" width="154" x="710" y="559"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8" bpmnElement="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8">
+        <dc:Bounds height="102" width="154" x="710" y="676"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__47825BB0-0584-4F12-AC7B-539E39035FCA" bpmnElement="_47825BB0-0584-4F12-AC7B-539E39035FCA">
+        <dc:Bounds height="102" width="154" x="710" y="793"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__EA9C47BF-E996-4941-ADE3-7BB5CB9641FE_to_shape__F8920E04-B14A-47F4-82E8-E430EB4475E2" bpmnElement="_08A01C4F-56AD-43DF-955C-1DECDDB47EBE">
+        <di:waypoint x="408" y="142"/>
+        <di:waypoint x="573" y="142"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__47825BB0-0584-4F12-AC7B-539E39035FCA_to_shape__D4DC8E5F-7B31-4B89-8A31-7D50B46E50B6" bpmnElement="_24266760-316A-4E58-BAB8-94BF3EEDB1FE">
+        <di:waypoint x="787" y="844"/>
+        <di:waypoint x="966" y="844"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__F8920E04-B14A-47F4-82E8-E430EB4475E2_to_shape__246E54FC-8397-4E35-8D03-D5976180CDB8" bpmnElement="_3C81FE81-49E9-4A75-ACD2-D05083451A44">
+        <di:waypoint x="573" y="142"/>
+        <di:waypoint x="787" y="142"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__246E54FC-8397-4E35-8D03-D5976180CDB8_to_shape__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A" bpmnElement="_72DF28AA-9C8A-42B2-878E-0025C53BA29D">
+        <di:waypoint x="787" y="142"/>
+        <di:waypoint x="787" y="259"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A_to_shape__48F315F2-829A-40E4-8EB7-55DA4B561199" bpmnElement="_78A69204-22D3-43D0-B7C4-60EB3933AF88">
+        <di:waypoint x="787" y="259"/>
+        <di:waypoint x="787" y="376"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__48F315F2-829A-40E4-8EB7-55DA4B561199_to_shape__965387A7-07D4-45C9-B738-BE9E4DC3B3A1" bpmnElement="_1DB5CD23-4937-4E95-8991-3097B6906D4F">
+        <di:waypoint x="787" y="376"/>
+        <di:waypoint x="787" y="493"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__965387A7-07D4-45C9-B738-BE9E4DC3B3A1_to_shape__388BC2EE-C307-43D2-89C6-60E3B9C665EF" bpmnElement="_4528A096-4CFB-48BD-B412-07A1A189206C">
+        <di:waypoint x="787" y="493"/>
+        <di:waypoint x="787" y="610"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__388BC2EE-C307-43D2-89C6-60E3B9C665EF_to_shape__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8" bpmnElement="_02B45E27-177D-4B20-A3B7-AB5D8AFA2FD3">
+        <di:waypoint x="787" y="610"/>
+        <di:waypoint x="787" y="727"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8_to_shape__47825BB0-0584-4F12-AC7B-539E39035FCA" bpmnElement="_7B7AA1FF-E767-4DA0-AA58-E1B09DC993F0">
+        <di:waypoint x="787" y="727"/>
+        <di:waypoint x="787" y="844"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="_246E54FC-8397-4E35-8D03-D5976180CDB8">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_F8920E04-B14A-47F4-82E8-E430EB4475E2">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_5F551CE8-B33B-4C6D-B81F-0F401E2AAC1A">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_48F315F2-829A-40E4-8EB7-55DA4B561199">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_965387A7-07D4-45C9-B738-BE9E4DC3B3A1">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_388BC2EE-C307-43D2-89C6-60E3B9C665EF">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_9E0A78AD-5BE1-4EEE-A33D-463BCD3771A8">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_47825BB0-0584-4F12-AC7B-539E39035FCA">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_QOj9MNtHEDqh4tc9SPbkdw</bpmn2:source>
+    <bpmn2:target>_QOj9MNtHEDqh4tc9SPbkdw</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
